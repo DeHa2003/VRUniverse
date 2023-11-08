@@ -1,25 +1,35 @@
+using TMPro;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 
 public class NameObj : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private string nameString;
+    [SerializeField] private GameObject textObj;
+
+    private TextMeshPro textName;
+
+    private void Awake()
     {
-        CheckNameObj();
+        textName = textObj.GetComponent<TextMeshPro>();
     }
 
-    private void CheckNameObj()
+    public void ShowNameObject()
     {
-        if(gameObject.GetComponent<Interactable>().isHovering == true)
-        {
-            gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            gameObject.transform.GetChild(0).transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position, Vector3.up);
-        }
-        else
-            gameObject.transform.GetChild(0).gameObject.SetActive(false);
-        Invoke(nameof(CheckNameObj), 1);
+        textName.text = nameString;
+        textObj.SetActive(true);
+        textObj.transform.LookAt(Camera.main.transform);
+        textObj.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position, Vector3.up);
     }
+
+    public void HideNameObject()
+    {
+        textObj.SetActive(false);
+    }
+
+    
+    //gameObject.transform.GetChild(0).transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position, Vector3.up);
+    
 
     
 }

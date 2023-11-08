@@ -14,8 +14,8 @@ public class TriggerSborka : MonoBehaviour
     {
         if(other.gameObject.CompareTag(gameObject.tag))
         {
-            destroyObj.DiactivateHandObject(other.gameObject, other.transform.parent.GetComponent<Hand>());
             other.gameObject.transform.SetPositionAndRotation(transform.position, transform.rotation);
+            destroyObj.DiactivateHandObject(other.gameObject);
 
             score.Increase();
             textTaskDone.TaskDone();

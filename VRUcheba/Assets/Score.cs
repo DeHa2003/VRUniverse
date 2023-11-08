@@ -5,26 +5,33 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    [SerializeField] private PCAssembly pcAssembly;
-    [SerializeField] private int maxscore;
-    [SerializeField] private TextMeshProUGUI textScore;
+    [SerializeField] protected Task task;
+    [SerializeField] protected int maxscore;
+    [SerializeField] protected TextMeshProUGUI textScore;
 
-    private int score = 0;
-    public void Increase()
+    public int ScoreCount { get; private set; }
+    protected void Awake()
     {
-        if (score < maxscore)
+        ScoreCount = 0;
+    }
+    public virtual void Increase()
+    {
+        if (ScoreCount < maxscore)
         {
-            score += 1;
-            textScore.text = score.ToString();
+            ScoreCount += 1;
+            textScore.text = ScoreCount.ToString();
         }
 
-        if (score == maxscore)
+        if (ScoreCount == maxscore)
         {
             AudioManager.instance.PlaySounds(Sound.TypeAudio.CompletedGame);
-            pcAssembly.CompletedTask();
 
-            TaskManager taskManager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<TaskManager>();
-            taskManager.Congratulations(); taskManager.Congratulations();
+
+            task.CompletedTask();
+
+
+            TaskUIManager taskManager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<TaskUIManager>();
+            taskManager.Congratulations();
         }
     }
 }

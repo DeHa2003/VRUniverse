@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PCAssembly : Tasks
+public class PCAssembly : Task
 {
     [SerializeField] private Score score;
     [SerializeField] private List<Transform> transformsObjs;
@@ -13,10 +13,5 @@ public class PCAssembly : Tasks
         {
             transform.position = SpawnObjects.instance.RandomHideSpawn().position;
         }
-    }
-
-    public void CompletedTask()
-    {
-        Destroy(gameObject);
     }
 }

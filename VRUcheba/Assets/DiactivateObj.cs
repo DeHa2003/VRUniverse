@@ -8,11 +8,15 @@ public class DiactivateObj : MonoBehaviour
     [SerializeField] private Transform parentObj;
 
     private Hand hand;
-    public void DiactivateHandObject(GameObject attachedObj, Hand hand)
+    public void DiactivateHandObject(GameObject attachedObj, bool destroyHandComponents = true)
     {
+        hand = attachedObj.transform.parent.GetComponent<Hand>();
         hand.DetachObject(attachedObj, attachedObj.GetComponent<Throwable>().restoreOriginalParent);
-        Destroy(attachedObj.GetComponent<Throwable>());
-        Destroy(attachedObj.GetComponent<Rigidbody>());
-        attachedObj.transform.parent = parentObj.parent;
+        if (destroyHandComponents)
+        {
+            Destroy(attachedObj.GetComponent<Throwable>());
+            Destroy(attachedObj.GetComponent<Rigidbody>());
+            attachedObj.transform.parent = parentObj.parent;
+        }
     }
 }
