@@ -246,7 +246,7 @@ namespace Valve.VR.InteractionSystem
         /// <summary>
         /// Called when a Hand starts hovering over this object
         /// </summary>
-        protected virtual void OnHandHoverBegin(Hand hand)
+        public virtual void OnHandHoverBegin(Hand hand)
         {
             wasHovering = isHovering;
             isHovering = true;
@@ -264,7 +264,7 @@ namespace Valve.VR.InteractionSystem
         /// <summary>
         /// Called when a Hand stops hovering over this object
         /// </summary>
-        protected virtual void OnHandHoverEnd(Hand hand)
+        public virtual void OnHandHoverEnd(Hand hand)
         {
             wasHovering = isHovering;
 
@@ -294,7 +294,7 @@ namespace Valve.VR.InteractionSystem
         protected float blendToPoseTime = 0.1f;
         protected float releasePoseBlendTime = 0.2f;
 
-        protected virtual void OnAttachedToHand(Hand hand)
+        public virtual void OnAttachedToHand(Hand hand)
         {
             if (activateActionSetOnAttach != null)
                 activateActionSetOnAttach.Activate(hand.handType);
@@ -312,7 +312,7 @@ namespace Valve.VR.InteractionSystem
             attachedToHand = hand;
         }
 
-        protected virtual void OnDetachedFromHand(Hand hand)
+        public virtual void OnDetachedFromHand(Hand hand)
         {
             if (activateActionSetOnAttach != null)
             {

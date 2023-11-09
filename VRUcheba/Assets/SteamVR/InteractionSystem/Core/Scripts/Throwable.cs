@@ -134,7 +134,7 @@ namespace Valve.VR.InteractionSystem
 		}
 
         //-------------------------------------------------
-        protected virtual void OnAttachedToHand( Hand hand )
+        public virtual void OnAttachedToHand( Hand hand )
 		{
             //Debug.Log("<b>[SteamVR Interaction]</b> Pickup: " + hand.GetGrabStarting().ToString());
 

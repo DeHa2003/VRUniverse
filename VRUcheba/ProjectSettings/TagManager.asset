@@ -12,11 +12,13 @@ TagManager:
   - VideoCard
   - Ram2
   - Canvas
+  - VR
+  - UI
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - VR
   - Water
   - UI
   - 

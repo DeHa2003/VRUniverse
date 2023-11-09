@@ -30,7 +30,7 @@ namespace Valve.VR.Extras
         private void Start()
         {
             if (pose == null)
-                pose = this.GetComponent<SteamVR_Behaviour_Pose>();
+                pose = GetComponent<SteamVR_Behaviour_Pose>();
             if (pose == null)
                 Debug.LogError("No SteamVR_Behaviour_Pose component found on this object", this);
 
@@ -62,7 +62,7 @@ namespace Valve.VR.Extras
             {
                 if (collider)
                 {
-                    Object.Destroy(collider);
+                    Destroy(collider);
                 }
             }
             Material newMaterial = new Material(Shader.Find("Unlit/Color"));
@@ -72,20 +72,17 @@ namespace Valve.VR.Extras
 
         public virtual void OnPointerIn(PointerEventArgs e)
         {
-            if (PointerIn != null)
-                PointerIn(this, e);
+            PointerIn?.Invoke(this, e);
         }
 
         public virtual void OnPointerClick(PointerEventArgs e)
         {
-            if (PointerClick != null)
-                PointerClick(this, e);
+            PointerClick?.Invoke(this, e);
         }
 
         public virtual void OnPointerOut(PointerEventArgs e)
         {
-            if (PointerOut != null)
-                PointerOut(this, e);
+            PointerOut?.Invoke(this, e);
         }
 
 
