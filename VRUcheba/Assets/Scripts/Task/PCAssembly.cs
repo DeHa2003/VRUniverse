@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PCAssembly : Task
 {
-    [SerializeField] private Score score;
     [SerializeField] private List<Transform> transformsObjs;
 
     private void Start()

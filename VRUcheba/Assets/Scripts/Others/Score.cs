@@ -24,14 +24,10 @@ public class Score : MonoBehaviour
 
         if (ScoreCount == maxscore)
         {
-            AudioManager.instance.PlaySounds(Sound.TypeAudio.CompletedGame);
+            AudioManager.instance.PlaySounds(TypeAudio.CompletedGame);
 
 
             task.CompletedTask();
-
-
-            TaskUIManager taskManager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<TaskUIManager>();
-            taskManager.Congratulations();
         }
     }
 }

@@ -1488,8 +1488,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   task: {fileID: 3541456204400395301}
-  maxscore: 4
+  maxscore: 5
   textScore: {fileID: 2599552267470826666}
+  ScoreCount: 0
 --- !u!1 &2599552267910419138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,7 +1978,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  restoreOriginalParent: 0
+  restoreOriginalParent: 1
   attached: 0
   onPickUp:
     m_PersistentCalls:
@@ -2402,7 +2403,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  restoreOriginalParent: 0
+  restoreOriginalParent: 1
   attached: 0
   onPickUp:
     m_PersistentCalls:
@@ -2692,7 +2693,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  restoreOriginalParent: 0
+  restoreOriginalParent: 1
   attached: 0
   onPickUp:
     m_PersistentCalls:
@@ -2981,7 +2982,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  restoreOriginalParent: 0
+  restoreOriginalParent: 1
   attached: 0
   onPickUp:
     m_PersistentCalls:
@@ -3559,7 +3560,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  restoreOriginalParent: 0
+  restoreOriginalParent: 1
   attached: 0
   onPickUp:
     m_PersistentCalls:
@@ -3900,7 +3901,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4d9921ab13ee642b24f7280e22ca6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orderToDissembly: []
+  VRObjects:
+  - {fileID: 2599552268126748681}
+  - {fileID: 2599552268215513778}
+  - {fileID: 2599552268837314128}
+  - {fileID: 2599552268416555750}
+  - {fileID: 2599552268537545096}
+  diactivateObjs: {fileID: 7252054748093921059}
 --- !u!114 &7252054748093921059
 MonoBehaviour:
   m_ObjectHideFlags: 0

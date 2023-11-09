@@ -202,18 +202,6 @@
                },
                "mode" : "trackpad",
                "path" : "/user/hand/left/input/trackpad"
-            },
-            {
-               "inputs" : {
-                  "north" : {
-                     "output" : "/actions/default/in/teleport"
-                  }
-               },
-               "mode" : "dpad",
-               "parameters" : {
-                  "sub_mode" : "click"
-               },
-               "path" : "/user/hand/right/input/trackpad"
             }
          ]
       },
@@ -260,7 +248,7 @@
    },
    "category" : "steamvr_input",
    "controller_type" : "vive_controller",
-   "description" : "ver 0.1.1",
+   "description" : "ver 0.1.2",
    "interaction_profile" : "",
    "name" : "VRUcheba",
    "options" : {},

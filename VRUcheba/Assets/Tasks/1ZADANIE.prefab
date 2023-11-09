@@ -3730,7 +3730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb156b6e8e5fb64987f5f3b1e16c165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pcAssembly: {fileID: 6652664064276719172}
+  task: {fileID: 6652664064276719172}
   maxscore: 5
   textScore: {fileID: 6132275425666686282}
 --- !u!1 &6132275425495774554
@@ -4770,7 +4770,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853560ee19187b54ea15152097f283d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 7369820158246023902}
+  VRObjects:
+  - {fileID: 4649640187549226704}
+  - {fileID: 2926134934512739586}
+  - {fileID: 6132275424518271390}
+  - {fileID: 1497432605566120793}
+  - {fileID: 1571613501198008296}
+  diactivateObjs: {fileID: 8184251061801307891}
   transformsObjs:
   - {fileID: 3688854742869732994}
   - {fileID: 10483571117567581}

@@ -7,7 +7,7 @@ using Valve.VR.InteractionSystem;
 public class TriggerRazborka : MonoBehaviour
 {
     [SerializeField] private int numberStepThisObj;
-    [SerializeField] private DiactivateObj diactivateObj;
+    [SerializeField] private DiactivateVRObject diactivateObj;
     [SerializeField] private Score score;
     [SerializeField] private TextTaskDone taskDone;
 
@@ -26,7 +26,7 @@ public class TriggerRazborka : MonoBehaviour
             else
             {
                 other.gameObject.transform.SetPositionAndRotation(transform.position, transform.rotation);
-                diactivateObj.DiactivateHandObject(other.gameObject);
+                diactivateObj.DetachObject(other.gameObject);
             }
         }
     }

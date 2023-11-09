@@ -2,9 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TypeAudio
+{
+    Background,
+    LoseGame,
+    CompletedGame,
+    Other
+}
+
 [System.Serializable]
 public class Sound
 {
+    public string name;
     public AudioSource audioSource;
     public AudioClip audioClip;
     [Range(0, 1f)] public float volume;
@@ -12,14 +21,6 @@ public class Sound
     public bool isPlayOnAwake;
     public bool isLoop;
     public TypeAudio type;
-
-    public enum TypeAudio
-    {
-        Background,
-        LoseGame,
-        CompletedGame,
-        Other
-    }
 }
 
 public class AudioManager : MonoBehaviour
@@ -44,7 +45,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlaySounds(Sound.TypeAudio typeAudio)
+    public void PlaySounds(TypeAudio typeAudio)
     {
         foreach (var sound in sounds)
         {

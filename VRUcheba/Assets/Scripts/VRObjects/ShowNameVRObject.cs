@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 
-public class NameObj : MonoBehaviour
+public class ShowNameVRObject : MonoBehaviour
 {
     [SerializeField] private string nameString;
     [SerializeField] private GameObject textObj;
@@ -26,10 +26,4 @@ public class NameObj : MonoBehaviour
     {
         textObj.SetActive(false);
     }
-
-    
-    //gameObject.transform.GetChild(0).transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position, Vector3.up);
-    
-
-    
 }

@@ -1676,6 +1676,8 @@ namespace Valve.VR.InteractionSystem
 
         public int GetDeviceIndex()
         {
+            Debug.Log("Device check :" + attachedObjects[0].ToString());
+            Debug.Log("Check device: " + applicationLostFocusObject.name);
             return trackedObject.GetDeviceIndex();
         }
     }

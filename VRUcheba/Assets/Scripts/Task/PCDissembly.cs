@@ -4,7 +4,5 @@ using UnityEngine;
 
 public class PCDissembly : Task
 {
-    [SerializeField] private List<GameObject> orderToDissembly;
-
 
 }
