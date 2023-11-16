@@ -535,6 +535,7 @@ namespace Valve.VR.InteractionSystem
                         attachedObject.initialPositionalOffset = attachedObject.handAttachmentPointTransform.InverseTransformPoint(objectToAttach.transform.position);
                         attachedObject.initialRotationalOffset = Quaternion.Inverse(attachedObject.handAttachmentPointTransform.rotation) * objectToAttach.transform.rotation;
                     }
+                    Debug.Log("AttachedObject: " + attachedObject);
                 }
             }
 
@@ -1677,6 +1678,11 @@ namespace Valve.VR.InteractionSystem
         public int GetDeviceIndex()
         {
             return trackedObject.GetDeviceIndex();
+        }
+
+        public string GetDeviceName()
+        {
+            return trackedObject.name;
         }
     }
 

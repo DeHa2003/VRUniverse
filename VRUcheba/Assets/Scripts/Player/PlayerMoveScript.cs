@@ -16,10 +16,12 @@ public class PlayerMoveScript : MonoBehaviour
     private Vector3 vectorToJump;
     private CharacterController characterController;
     private const float jumpGravity = -9.81f;
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
     }
+
     private void Update()
     {
         Vector3 vector = Player.instance.hmdTransform.TransformDirection(new Vector3(touchpad.axis.x, 0, touchpad.axis.y));
